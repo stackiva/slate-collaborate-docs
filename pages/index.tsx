@@ -1,7 +1,5 @@
 import styled from "@emotion/styled"
-import { addOne } from "~/lib/example"
 import { Layout } from "~/components/layout"
-import { Web } from "@thesunny/api"
 import content from "!!raw-loader!~/content/why-slate-collaborate.md"
 import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { parseMarkdown } from "~/lib/parse-markdown"
