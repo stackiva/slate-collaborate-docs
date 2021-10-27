@@ -1,13 +1,13 @@
 import { unified } from "unified"
 import { remark } from "remark"
 import markdown from "remark-parse"
-import prism from "remark-prism"
+// import prism from "remark-prism"
 import remarkHtml from "remark-html"
 
 export async function parseMarkdown(content: string) {
   const result = await unified()
     .use(markdown)
-    .use(prism as any)
+    // .use(prism as any)
     .use(remarkHtml)
     .process(content)
   return result.value
