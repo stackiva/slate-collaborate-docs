@@ -1,12 +1,10 @@
 # Why Slate Collaborative?
 
-!! First of all, welcome and thank you for trying out the **Beta for the Slate Collaborative Plugin**. Feel free to use this in your products at this time. The collaborative editing is stable and we haven't found bugs for some time; however, we are planning to add some important features before taking it out of beta.
-
-Slate Collaborate **adds collaborative editing to any Slate editor** in a few lines of code. With it multiple people can view and edit the same document at the same time and see each others changes live.
+Slate Collaborate adds collaborative editing to any Slate editor in a few lines of code. With it multiple people can view and edit the same document at the same time and see each others changes live.
 
 Google Docs popularized collaborating editing in 2006 nearly 14 years ago. Collaborative editing is table stakes for serious apps in 2020. Users want and expect real-time collaborative editing.
 
-## Why **Slate** as a Collaborative Editor
+## Why Slate as a Collaborative Editor
 
 Developers prefer Slate because of its simple yet powerful nested data model. Because of it, it's easy to support advanced data types like tables and nested quotes and it is flexible enough to support any custom data type you can imagine.
 

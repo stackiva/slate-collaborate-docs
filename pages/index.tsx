@@ -3,25 +3,28 @@ import { addOne } from "~/lib/example"
 import { Layout } from "~/components/layout"
 import { Web } from "@thesunny/api"
 import content from "!!raw-loader!~/content/why-slate-collaborate.md"
+import { GetStaticProps, InferGetStaticPropsType } from "next"
+import { parseMarkdown } from "~/lib/parse-markdown"
+
+// https://blog.nrwl.io/read-and-render-md-files-with-next-js-and-nx-89a85c1d9b44
 
 const Container = styled.div`
   margin: 1em;
   max-width: 32em;
 `
-const Title = styled.h1``
-
-const getServerSideProps = Web.getServerSideProps(async () => {
+export const getStaticProps: GetStaticProps = async (context) => {
+  const value = await parseMarkdown(content)
   return {
-    props: {},
+    props: { html: value },
   }
-})
+}
 
-export default function () {
+export default function ({
+  html,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout>
-      <Title>Hello World</Title>
-      {content}
-      <p>Luck number {addOne(6)}</p>
+      <div dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }
