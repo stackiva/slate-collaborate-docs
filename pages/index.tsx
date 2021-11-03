@@ -11,12 +11,9 @@ const Container = styled.div`
   max-width: 32em;
 `
 export const getStaticProps: GetStaticProps = async (context) => {
-  // const value = await parseMarkdown(content)
-  // return {
-  //   props: { html: value },
-  // }
+  const value = await parseMarkdown(content)
   return {
-    props: {},
+    props: { html: value },
   }
 }
 
