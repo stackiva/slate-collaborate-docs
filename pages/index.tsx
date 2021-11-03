@@ -23,7 +23,7 @@ export default function ({
   return (
     <Layout>
       <div>Hello World</div>
-      {/* <div dangerouslySetInnerHTML={{ __html: html }} /> */}
+      <div dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }
