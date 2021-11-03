@@ -11,9 +11,12 @@ const Container = styled.div`
   max-width: 32em;
 `
 export const getStaticProps: GetStaticProps = async (context) => {
-  const value = await parseMarkdown(content)
+  // const value = await parseMarkdown(content)
+  // return {
+  //   props: { html: value },
+  // }
   return {
-    props: { html: value },
+    props: {},
   }
 }
 
@@ -22,7 +25,8 @@ export default function ({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div>Hello World</div>
+      {/* <div dangerouslySetInnerHTML={{ __html: html }} /> */}
     </Layout>
   )
 }
